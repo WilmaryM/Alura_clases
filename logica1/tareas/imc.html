@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa calcular IMC </title>
+</head>
+<body>
+    
+<h1>Programa calcular IMC</h1>
+    <script>
+
+        function salto_linear() {
+                document.write('<br>');
+                document.write('<br>');
+                
+            }
+        function imprimir(frase) {
+            document.write(frase);
+            salto_linear()
+        }
+
+        function calcularImcUsuario(peso,altura,name) {
+
+        return (peso / (altura * altura));
+        }
+
+        name = prompt('Informe su nombre:');
+        pesoInformado = prompt(name + ', Informe su peso:');
+        alturaInformada = prompt(name + ', Informe su altura:');
+        imcCalculado = calcularImcUsuario(pesoInformado, alturaInformada)
+
+        imprimir(name + ', Su IMC calculado de es '+ imcCalculado);
+
+       if (imcCalculado < 18.5){
+                imprimir('Su IMC esta por debajo de lo recomendado');
+            }
+
+       if (imcCalculado >=18.5){
+
+          if(imcCalculado < 25){
+
+                imprimir('El IMC esta dentro del intervalo recomendado');
+            }
+        }
+
+       if (imcCalculado > 25){
+
+            if(imcCalculado < 30){
+
+            imprimir('El IMC es considerado sobrepeso');
+                 }
+}
+       if (imcCalculado >= 30.0 ){
+                imprimir('Su IMC es considerado Obesidad');
+            }     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//          function salto_linear() {
+//         document.write('<br>');
+//         document.write('<br>');
+        
+//     }
+// function imprimir(frase) {
+//     document.write(frase);
+//     salto_linear()
+// }
+
+// function calcularImcUsuario(peso,altura,name) {
+
+// return (peso / (altura * altura));
+// }
+
+// name = prompt('Informe su nombre:');
+// pesoInformado = prompt(name + ' Informe su peso:');
+// alturaInformada = prompt(name + ' Informe su altura:');
+// imcCalculado = calcularImcUsuario(pesoInformado, alturaInformada)
+
+//  imprimir(name + ', Su IMC calculado de es '+ imcCalculado);
+
+
+
+
+
+/* function calcularImcPro(peso,altura) {
+
+   return (peso / (altura * altura));
+ }
+    imprimir('El promedio del IMC calculado de Wil y Aris es '+ ((calcularImcPro(125, 1.60)+calcularImcPro(145, 1.60)
+ ))/2);
+
+imprimir('El promedio del IMC calculado de Ana y Maris es '+ ((calcularImcPro(150, 1.84)+calcularImcPro(115, 1.50)
+ ))/2);*/
+
+/*
+
+function calcularImc(peso,altura,name) {
+  imc = peso / (altura * altura);
+
+  imprimir('El IMC calculado de ' + name + ' es: ' + imc);
+}
+calcularImc(125, 1.60, 'Wilmary')
+calcularImc(145, 1.60, 'Aris');
+
+
+*/
+
+
+    </script>
+</body>
+</html>

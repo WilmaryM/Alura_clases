@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edad en la familia</title>
+</head>
+<body>
+    <center><h1>Calcula el promdio de edades en una familia</h1></center>
+    <script>
+               function salto_linear(){
+            document.write('<br>');
+            document.write('<br>');
+        }
+        function imprimir_promdioEdad(frase) {
+            document.write(frase);
+            salto_linear();
+        }
+          let numeroDeMiembros = parseInt(prompt('Ingrese la cantidad de miembros de su famila'));
+                let contador = 1
+                let totalEdades = 0
+
+            while(contador <= numeroDeMiembros) {
+                let edad = parseInt(prompt('Ingrese la edad del familiar'))
+                 totalEdades = totalEdades + edad
+                contador++;
+            }
+            let promdioEdad = totalEdades / numeroDeMiembros
+            imprimir_promdioEdad('La media edad de la familia es ' + promdioEdad);
+            imprimir_promdioEdad('Fin');
+
+    </script>
+</body>
+</html>
